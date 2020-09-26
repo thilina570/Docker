@@ -1,3 +1,4 @@
+
 # docker
 
 The 7 Types of Virtualization
@@ -22,17 +23,45 @@ The base command for the Docker CLI.
 |--|--|
 | `docker --version` |  |
 | `docker info` |  |
+| `docker run <imageName>` | run a container from image |
 | `docker run hello-world` |  |
+| `docker ps` | running containers |
+| `docker ps -a` | list all containers on the system |
+| `docker stop ContainerID` | stop running container |
+| `docker rm ContainerID ` | remove stoped containers |
+| `docker images` | list of  images |
+| `docker images -q` | return only the image ID’s of the images |
+| `docker rmi <ImageID>` | removing  images |
+
+The base command for the Docker CLI - 2.
+|  |  |
+|--|--|
+| `docker run ubuntu sleep 10` |  |
+| `docker exec <container> cat /etc/hosts` |  |
 | `docker run --name <custom name> <image name>` |  |
-| `docker images` | list of Docker images |
-| `docker images -q` | return only the Image ID’s of the images |
-| `docker rmi <ImageID>` | Removing Docker Images |
-| `docker ps` | return the currently running containers |
-| `docker ps -a` | list all of the containers on the system |
+
+The base command for the Docker CLI - 3.
+|  |  |
+|--|--|
+| `docker run ubuntu:18.04` | run specific version |
+| `docker run -d centos sleep 1000` | -d for detach : run in background |
+| `docker run attache <containerId>` | attache to container oposite of -d |
+| `docker run -i <custom name> <image name>` |  | 
+| `docker run -p 3306:3306 mysql` |  |
+| `docker run -v host/data:container/data mysql` | volume mapping |
+
+|  |  |
+|--|--|
 | `docker top ContainerID` |  |
-| `docker stop ContainerID` |  |
-| `docker rm ContainerID ` |  |
 | `docker stats ContainerID ` |  |
 | `docker pause ContainerID ` | |
 | `docker unpause ContainerID` | |
 | `docker kill ContainerID` | |
+| `docker container logs <containerId>` | |
+| `docker container top <containerId>` | |
+| `docker container inspect <containerId>` | view  |
+| `docker container stats` | view  |
+| `docker container run -it --name <containerName> <image> bash` | start new container interactively  |
+| `docker container start -ai ubuntu` | view  |
+| `docker container exec -it mysql bash` | run additional command in existing container  |
+
