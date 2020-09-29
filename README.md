@@ -44,8 +44,9 @@ The base command for the Docker CLI - 3.
 |  |  |
 |--|--|
 | `docker run ubuntu:18.04` | run specific version |
+| `docker run -d -it ubuntu` | run in interactive mode in bg |
 | `docker run -d centos sleep 1000` | -d for detach : run in background |
-| `docker run attache <containerId>` | attache to container oposite of -d |
+| `docker attach <containerId>` | attache to container oposite of -d |
 | `docker run -i <custom name> <image name>` |  | 
 | `docker run -p 3306:3306 mysql` |  |
 | `docker run -v host/data:container/data mysql` | volume mapping |
@@ -65,3 +66,14 @@ The base command for the Docker CLI - 3.
 | `docker container start -ai ubuntu` | view  |
 | `docker container exec -it mysql bash` | run additional command in existing container  |
 
+docker run -p 80:80 -d -v /home/thilina/www/test:/usr/share/nginx/html nginx
+docker run -p 80:80 -d -v /home/thilina/www/test:/var/www/html/ php:apache
+docker run -v /home/thilina/www/mariadb:/var/lib/mysql -p 3306:3306 -e MYSQL_ROOT_PASSWORD=root -d mariadb
+docker run -e MYSQL_ROOT_PASSWORD=root -d -p 8080:80 phpmyadmin
+
+--------------------------------------
+git clone https://github.com/bcit-ci/CodeIgniter.git ./
+docker run -it -v /home/thilina/www/test/php-test:/app -u 1000 composer bash
+composer install
+
+docker-compose exec web /var/www/html/artisan migrate
