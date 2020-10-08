@@ -1,4 +1,5 @@
 
+
 # docker
 
 The 7 Types of Virtualization
@@ -65,6 +66,7 @@ The base command for the Docker CLI - 3.
 | `docker container run -it --name <containerName> <image> bash` | start new container interactively  |
 | `docker container start -ai ubuntu` | view  |
 | `docker container exec -it mysql bash` | run additional command in existing container  |
+| `docker-compose exec verification-web php artisan verify:payId` |   |
 
 docker run -p 80:80 -d -v /home/thilina/www/test:/usr/share/nginx/html nginx
 docker run -p 80:80 -d -v /home/thilina/www/test:/var/www/html/ php:apache
@@ -77,3 +79,4 @@ docker run -it -v /home/thilina/www/test/php-test:/app -u 1000 composer bash
 composer install
 
 docker-compose exec web /var/www/html/artisan migrate
+
