@@ -68,15 +68,16 @@ The 7 Types of Virtualization
 | `docker container start -ai ubuntu` |   |
 | `docker container exec -it mysql bash` | run additional command in existing container  |
 ###  Compose commands.
-
+|  |  |
+|--|--|
 | `docker-compose up -d` |   |
 | `docker-compose exec verification-web php artisan verify:pay` |   |
 
 ###  sample containers.
-
+|  |  |
+|--|--|
 | `docker run -p 80:80 -d -v /home/thilina/www/test:/usr/share/nginx/html nginx` |   |
 | `docker run -p 80:80 -d -v /home/thilina/www/test:/var/www/html/ php:apache` |   |
-| `docker run -v /home/thilina/www/mariadb:/var/lib/mysql -p 3306:3306 -e MYSQL_ROOT_PASSWORD=root -d mariadb
-` |   |
+| `docker run -v /home/thilina/www/mariadb:/var/lib/mysql -p 3306:3306 -e MYSQL_ROOT_PASSWORD=root -d mariadb` |   |
 | `docker run -e MYSQL_ROOT_PASSWORD=root -d -p 8080:80 phpmyadmin` |   |
 | `docker run -it -v /home/thilina/www/test/php-test:/app -u 1000 composer bash` |   |
